@@ -1,0 +1,23 @@
+
+server:
+  port: 8066
+
+spring:
+  datasource:
+    url: jdbc:mysql://10.96.86.141:3306/quartz?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      pool-name: hikariPool
+      maximum-pool-size: 15
+      minimum-idle: 10
+      max-lifetime: 300
+  jpa:
+    database: mysql
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+
